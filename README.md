@@ -11,8 +11,8 @@ Getting started is simple. You just need Python 3.x installed on your machine an
 - Fetch stock snapshots for multiple symbols simultaneously.
 - Extract trade, quote, minute bar, daily bar, and previous daily bar data.
 - Filter the data by type to focus on specific subsets.
+- Sort the output by any available column.
 - Omit specific columns from the output.
-- Output the processed data in a structured format for easy analysis.
 - Output the processed data in a structured format for easy analysis.
 
 The Alpaca Snapshot Analyzer is designed for traders, investors, and analysts who require detailed and up-to-date stock data. It provides valuable insights for making informed decisions, identifying trends, and performing data-driven analysis.
