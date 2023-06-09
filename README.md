@@ -11,6 +11,8 @@ Getting started is simple. You just need Python 3.x installed on your machine an
 - Fetch stock snapshots for multiple symbols simultaneously.
 - Extract trade, quote, minute bar, daily bar, and previous daily bar data.
 - Filter the data by type to focus on specific subsets.
+- Omit specific columns from the output.
+- Output the processed data in a structured format for easy analysis.
 - Output the processed data in a structured format for easy analysis.
 
 The Alpaca Snapshot Analyzer is designed for traders, investors, and analysts who require detailed and up-to-date stock data. It provides valuable insights for making informed decisions, identifying trends, and performing data-driven analysis.
@@ -55,11 +57,14 @@ export APCA_API_BASE_URL=<base-url>
 1. Run the script with the desired options:
 
 ```
-python snapshot_analyzer.py [-l <symbol-list-file>] [-t <data-type>]
+python snapshot_analyzer.py [-l <symbol-list-file>] [-t <data-type>] [-s <sort-by>] [-o <sort-order>] [-oc <omit-columns>]
 ```
 
-- `<symbol-list-file>` (optional): Path to the file containing the stock symbols.
-- `<data-type>` (optional): Type of data to output (all, trade, quote, minute_bar, daily_bar, prev_daily_bar).
+- <symbol-list-file> (optional): Path to the file containing the stock symbols.
+- <data-type> (optional): Type of data to output (all, trade, quote, minute_bar, daily_bar, prev_daily_bar).
+- <sort-by> (optional): Column to sort the output by. Default is 'symbol'.
+- <sort-order> (optional): Order to sort the output in. Default is 'ascending'.
+- <omit-columns> (optional): Comma-separated list of columns to omit from the output.
 
 If a stock symbol list file is not provided, the script will use active symbols with a symbol length less than 5.
 

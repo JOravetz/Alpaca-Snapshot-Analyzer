@@ -196,7 +196,6 @@ def get_symbols_from_file(file_path):
 
     return symbols
 
-
 def main(args):
     """Main function to run the script.
 
@@ -223,6 +222,14 @@ def main(args):
     # Drop rows with NaN values
     df.dropna(inplace=True)
 
+    # Sort the dataframe
+    df = df.sort_values(by=args.sort_by, ascending=(args.sort_order == "ascending"))
+
+    # Omit specified columns
+    if args.omit_columns:
+        columns_to_omit = args.omit_columns.split(',')
+        df = df.drop(columns=columns_to_omit, errors='ignore')
+
     print(df)
 
 
@@ -247,6 +254,25 @@ if __name__ == "__main__":
             "prev_daily_bar",
         ],
         help="Type of data to output",
+    )
+    parser.add_argument(
+        "-s",
+        "--sort-by",
+        default="symbol",
+        help="Column to sort the output by. Default is 'symbol'.",
+    )
+    parser.add_argument(
+        "-o",
+        "--sort-order",
+        default="ascending",
+        choices=["ascending", "descending"],
+        help="Order to sort the output in. Default is 'ascending'.",
+    )
+    parser.add_argument(
+        "-oc",
+        "--omit-columns",
+        default="",
+        help="Comma-separated list of column names to omit from the output.",
     )
     args = parser.parse_args()
     main(args)
