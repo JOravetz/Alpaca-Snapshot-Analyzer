@@ -56,7 +56,6 @@ export APCA_API_BASE_URL=<base-url>
 
 ```
 python snapshot_analyzer.py [-l <symbol-list-file>] [-t <data-type>]
-
 ```
 
 - `<symbol-list-file>` (optional): Path to the file containing the stock symbols.
