@@ -17,12 +17,6 @@ Getting started is simple. You just need Python 3.x installed on your machine an
 
 The Alpaca Snapshot Analyzer is designed for traders, investors, and analysts who require detailed and up-to-date stock data. It provides valuable insights for making informed decisions, identifying trends, and performing data-driven analysis.
 
-Contributions to the Alpaca Snapshot Analyzer project are welcome. If you encounter any issues, have suggestions for improvements, or would like to contribute new features, please feel free to open an issue or submit a pull request.
-
-The project is open source and released under the MIT License, allowing you to modify, distribute, and use the code according to the license terms.
-
-Get started with the Alpaca Snapshot Analyzer today and gain valuable insights into stock snapshots to enhance your trading and investment strategies.
-
 ## Prerequisites
 
 Before running the script, ensure you have the following:
